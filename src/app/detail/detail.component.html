@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>{{name}}</h1>
+    <img [src]="getImage(id)" />
+    @for (type of types; track type) {
+        <p>{{type}}</p>
+    }
+    <p>Hp: {{this.stats?.hp}}</p>
+    <p>Attack: {{this.stats?.attack}}</p>
+    <p>Defense: {{this.stats?.defense}}</p>
+    <p>Special-Attack: {{this.stats?.specialAttack}}</p>
+    <p>Special-Defense: {{this.stats?.specialDefense}}</p>
+    <p>Speed: {{this.stats?.speed}}</p>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <mat-grid-list cols="8" rowHeight="0.5:1">
+      @for (list of lists; track list) {
+        <mat-grid-tile>
+          <mat-card class="pokemon-card">
+            <mat-card-header style="text-align: center;">
+              <mat-card-title>{{list.name}}</mat-card-title>
+              <mat-card-subtitle>Pokemon Breed</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="getImage(list.id)" alt="Photo of a list.name">
+            <!-- <mat-card-content>
+              <p>This is pokemon</p>
+            </mat-card-content> -->
+            <mat-card-actions>
+              <button mat-raised-button color="accent" (click)="gotToDetail(list.id)">DETAIL</button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+      }
+    </mat-grid-list>  
+</div>
+<router-outlet></router-outlet>
+
